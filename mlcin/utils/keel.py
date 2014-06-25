@@ -32,7 +32,7 @@ def load_dataset(string, separator=","):
 
     s = filter(lambda e: e[0] != '@', s)
     s = [v.strip().split(separator) for v in s]
-    X = np.asarray([[float(e) for e in v[:-1]] for v in s])
+    X = np.asarray([[float(e) for e in v[:-1]] for v in s if len(v) > 1])
 
     d = {'positive': 1, 'negative': 0}
     y = np.asarray([d[v[-1].strip()] if v[-1].strip() in d else v[-1].strip()
