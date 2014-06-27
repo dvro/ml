@@ -1,15 +1,15 @@
 # coding: utf-8
 import numpy as np
 from runner import Runner
-from mlcin.prototypes.rps import RandomPrototypeSelection
+from mlcin.prototypes.rsp1 import ReductionBySpacePartitioning1
 
 
 class RunnerRPS(Runner):
 
     def get_prototypes(self, X, y):
-        rps = RandomPrototypeSelection()
+        rps = ReductionBySpacePartitioning1(b=1)
         rps.fit(X, y).reduce_data()
-        print rps.get_prototypes()
+        #print rps.get_prototypes()
         return rps.get_prototypes()
 
 if __name__ == '__main__':
