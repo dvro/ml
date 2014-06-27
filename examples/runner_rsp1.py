@@ -14,10 +14,10 @@ class RunnerRPS(Runner):
 
 if __name__ == '__main__':
     runner = RunnerRPS(
-        folds=5,
+        folds=10,
         normalize=True,
         prefix='datasets',
-        module='imbalanced')
+        module='regular10')
 
     datasets = ['glass1', 'ecoli-0_vs_1', 'iris0', 'glass0']
     datasets = datasets + ['ecoli1', 'new-thyroid2', 'new-thyroid1', 'ecoli2']
@@ -26,6 +26,7 @@ if __name__ == '__main__':
         'glass2',
         'shuttle-c2-vs-c4',
         'glass-0-1-6_vs_5']
+    datasets = ['iris']
     runner.set_datasets(datasets)
 
     runner.run()

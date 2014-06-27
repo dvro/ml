@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding/artificial_rps1.py=utf-8
 encoding/artificial_rsp.py=utf-8
+encoding/artificial_rsp2.py=utf-8
+encoding/artificial_rsp3.py=utf-8
+encoding/balanced_rps1.py=utf-8
 encoding/runner.py=utf-8
 encoding/runner_rps.py=utf-8
 encoding/runner_rsp1.py=utf-8

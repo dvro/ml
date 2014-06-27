@@ -12,7 +12,22 @@ from mlcin.utils.graphics import plot_and_save
 if __name__ == '__main__':
 
     # creating prototype generation object
-    rps = ReductionBySpacePartitioning1(b=10)
+    rps = ReductionBySpacePartitioning1(b=5)
+    
+    runner = RunnerRPS(
+        folds=5,
+        normalize=True,
+        prefix='datasets',
+        module='balanced')
+
+    datasets = ['glass']
+    runner.set_datasets(datasets)
+
+    runner.run()
+
+    output = 'dataset\tGen. Accuracy\tMaj. Accuracy\tMin. Accuracy\t'
+    output = output + 'AUC. Accuracy\tData Reduction\n'
+    print output + runner.get_output_buffer()
 
     datasets = ['banana', 'normal', 'normal_multimodal']
     for dataset in datasets:
