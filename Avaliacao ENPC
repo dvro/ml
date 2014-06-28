@@ -1,0 +1,326 @@
+
+Dados:
+	Bases balanceadas: 
+		['glass', 'image_segmentation', 'ionosphere', 'iris', 'liver', 'pendigits', 'pima_diabetes', 'sonar', 'spambase', 'vehicle', 'vowel', 'wine', 'yeast' ]
+		folds: 10
+
+	Bases desbalanceadas:
+		['glass1', 'ecoli-0_vs_1', 'iris0', 'glass0', 'ecoli1', 'new-thyroid2', 'new-thyroid1', 'ecoli2', 'glass6', 'glass2', 'shuttle-c2-vs-c4', 'glass-0-1-6_vs_5']
+		folds: 5
+
+
+
+
+KNN bases desbalanceadas:
+
+	Resultado:
+
+		dataset	Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+		1	0.81	0.05	0.89	0.02	0.67	0.12	0.78	0.06	0.00	0.00	
+		2	0.97	0.02	0.95	0.07	0.98	0.03	0.96	0.03	0.00	0.00	
+		3	1.00	0.00	1.00	0.00	1.00	0.00	1.00	0.00	0.00	0.00	
+		4	0.84	0.06	0.86	0.08	0.80	0.08	0.83	0.06	0.00	0.00	
+		5	0.86	0.04	0.92	0.04	0.67	0.12	0.80	0.06	0.00	0.00	
+		6	0.99	0.01	0.99	0.01	0.97	0.06	0.98	0.03	0.00	0.00	
+		7	0.98	0.01	0.98	0.01	0.97	0.06	0.98	0.02	0.00	0.00	
+		8	0.95	0.04	0.96	0.04	0.87	0.12	0.92	0.07	0.00	0.00	
+		9	0.96	0.02	0.99	0.01	0.79	0.14	0.89	0.07	0.00	0.00	
+		10	0.87	0.05	0.92	0.05	0.22	0.19	0.57	0.11	0.00	0.00	
+		11	0.99	0.02	1.00	0.00	0.90	0.20	0.95	0.10	0.00	0.00	
+		12	0.96	0.02	0.97	0.02	0.80	0.24	0.89	0.12	0.00	0.00
+
+
+KNN bases balanceadas:
+
+	Resultado:
+
+		dataset	Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+		1	0.70	0.05	0.67	0.08	0.74	0.15	0.71	0.06	0.00	0.00	
+		2	0.97	0.01	0.97	0.01	1.00	0.00	0.98	0.00	0.00	0.00	
+		3	0.86	0.04	0.67	0.10	0.97	0.04	0.82	0.05	0.00	0.00	
+		4	0.95	0.05	0.96	0.05	0.94	0.13	0.95	0.07	0.00	0.00	
+		5	0.62	0.06	0.65	0.10	0.58	0.10	0.61	0.06	0.00	0.00	
+		6	0.99	0.00	0.99	0.00	0.99	0.01	0.99	0.00	0.00	0.00	
+		7	0.70	0.05	0.78	0.05	0.53	0.12	0.66	0.06	0.00	0.00	
+		8	0.87	0.11	0.83	0.16	0.90	0.11	0.86	0.12	0.00	0.00	
+		9	0.91	0.01	0.93	0.02	0.89	0.03	0.91	0.01	0.00	0.00	
+		10	0.70	0.05	0.77	0.05	0.48	0.11	0.63	0.07	0.00	0.00	
+		11	0.99	0.02	0.99	0.02	0.96	0.08	0.98	0.04	0.00	0.00	
+		12	0.96	0.03	0.93	0.05	1.00	0.00	0.97	0.02	0.00	0.00	
+		13	0.52	0.04	0.54	0.04	0.49	0.08	0.51	0.05	0.00	0.00	
+
+
+
+
+ENPC bases desbalanceadas:
+
+	dataset 1:
+		Quantidade inicial de prototipos:  16   19   13   08   06
+		Quantidade final de prototipos:    18   31   27   17   22
+
+	dataset 2:
+		Quantidade inicial de prototipos:  20   11   18   09   02
+		Quantidade final de prototipos:    12   08   13   11   02
+
+	dataset 3:
+		Quantidade inicial de prototipos:  09   10   19   17   06
+		Quantidade final de prototipos:    06   05   11   12   05
+
+	dataset 4:
+		Quantidade inicial de prototipos:  03   13   04   13   04
+		Quantidade final de prototipos:    32   18   44   16   24
+
+	dataset 5:
+		Quantidade inicial de prototipos:  10   20   14   08   07
+		Quantidade final de prototipos:    09   16   16   09   07
+
+	dataset 6:
+		Quantidade inicial de prototipos:  17   01   11   11   07
+		Quantidade final de prototipos:    04   04   04   07   03
+
+	dataset 7:
+		Quantidade inicial de prototipos:  01   12   20   19   15
+		Quantidade final de prototipos:    03   09   11   03   08
+
+	dataset 8:
+		Quantidade inicial de prototipos:  18   18   15   06   10
+		Quantidade final de prototipos:    10   11   11   12   07
+
+	dataset 9:
+		Quantidade inicial de prototipos:  10   16   15   17   02
+		Quantidade final de prototipos:    02   02   02   05   02
+
+	dataset 10:
+		Quantidade inicial de prototipos:  01   07   01   14   16
+		Quantidade final de prototipos:    05   04   10   06   03
+
+	dataset 11:
+		Quantidade inicial de prototipos:  16   20   08   18   01
+		Quantidade final de prototipos:    05   05   05   09   02
+
+	dataset 12:
+		Quantidade inicial de prototipos:  03   04   15   18   04
+		Quantidade final de prototipos:    02   01   01   07   01
+
+
+	Tempo:  547.914063931  segundos
+
+	Quantidade de iteracoes: 200
+
+	Resultado:
+
+		dataset	Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+		1	0.81	0.05	0.86	0.03	0.71	0.09	0.79	0.05	0.87	0.03	
+		2	0.96	0.02	0.91	0.07	0.99	0.01	0.95	0.03	0.95	0.02	
+		3	1.00	0.00	1.00	0.00	1.00	0.00	1.00	0.00	0.93	0.03	
+		4	0.81	0.08	0.83	0.04	0.76	0.25	0.80	0.12	0.84	0.06	
+		5	0.91	0.03	0.95	0.04	0.80	0.01	0.88	0.01	0.96	0.01	
+		6	0.97	0.02	0.98	0.02	0.94	0.11	0.96	0.05	0.97	0.01	
+		7	0.99	0.02	0.98	0.02	1.00	0.00	0.99	0.01	0.96	0.02	
+		8	0.96	0.02	0.97	0.02	0.91	0.06	0.94	0.03	0.96	0.01	
+		9	0.90	0.05	0.91	0.06	0.83	0.15	0.87	0.07	0.98	0.01	
+		10	0.89	0.04	0.97	0.05	0.00	0.00	0.48	0.02	0.97	0.01	
+		11	0.99	0.02	1.00	0.00	0.90	0.20	0.95	0.10	0.95	0.02	
+		12	0.94	0.03	0.98	0.03	0.10	0.20	0.54	0.08	0.98	0.02	
+
+
+
+
+
+
+ENPC bases balanceadas:
+
+	base 'glass' - 1:
+
+		Quantidade inicial de prototipos:  17   04   08   13   16   20   03   20   04   06
+		Quantidade final de prototipos:    67   60   56   66   57   54   58   62   62   68
+
+		Tempo:  796.527366161  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.70	0.09	0.68	0.11	0.74	0.12	0.71	0.10	0.68	0.02
+
+
+	base 'image_segmentation' - 2:
+
+		Quantidade inicial de prototipos:  18   17   17   06   03   08   05   07   07   18
+		Quantidade final de prototipos:    51   52   56   46   52   56   47   57   43   58
+
+		Tempo:  2428.55623698  Segundos
+
+		Quantidade de iteracoes: 100
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.93	0.01	0.91	0.02	1.00	0.00	0.96	0.01	0.98	0.00
+
+
+	base 'ionosphere' - 3:
+
+		Quantidade inicial de prototipos:  04   14   18   19   12   08   18   13   16   10
+		Quantidade final de prototipos:    07   18   10   07   08   09   07   05   15   10
+
+		Tempo:  160.559035063  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.89	0.03	0.79	0.07	0.95	0.04	0.87	0.03	0.97	0.01
+
+
+	base 'iris' - 4:
+
+		Quantidade inicial de prototipos:  14   08   05   17   09   08   12   18   05   02
+		Quantidade final de prototipos:    09   06   06   10   10   06   06   12   06   06
+
+		Tempo:  60.8661949635  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.97	0.03	0.98	0.04	0.94	0.09	0.96	0.04	0.94	0.02
+
+
+	base 'liver' - 5:
+
+		Quantidade inicial de prototipos:  03    06    07    11    12    04    15    17    15    15
+		Quantidade final de prototipos:   105   104   110   104   101   111   110   106   111   100
+
+		Tempo:  2028.55932379  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.62	0.08	0.66	0.09	0.56	0.14	0.61	0.08	0.66	0.01
+
+
+	base 'pendigits' - 6:
+
+		Quantidade inicial de prototipos:  13   14   07   10   04   14   09   05   05   03
+		Quantidade final de prototipos:    49   43   47   48   50   49   51   46   57   46
+
+		Tempo:  8929.53237796  Segundos
+
+		Quantidade de iteracoes: 100
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.95	0.01	0.96	0.01	0.87	0.05	0.92	0.03	1.00	0.00
+
+
+	base 'pima_diabetes' - 7:
+
+		Quantidade inicial de prototipos:  17    15    13    08    07    08    14    14    09    02
+		Quantidade final de prototipos:   173   148   202   166   184   163   153   181   158   165
+
+		Tempo:  5046.07912207  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.70	0.06	0.75	0.05	0.60	0.15	0.68	0.08	0.76	0.02	
+
+
+	base 'sonar' - 8:
+
+		Quantidade inicial de prototipos:  16   06   13   15   02   19   03   04   02   13
+		Quantidade final de prototipos:    25   19   21   21   25   22   20   17   19   27
+
+		Tempo:  220.913121939  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.86	0.06	0.80	0.07	0.90	0.10	0.85	0.06	0.88	0.02
+
+
+	base 'spambase' - 9:
+
+		Quantidade inicial de prototipos:  20   14   20   10   10   11   19   17   12   06
+		Quantidade final de prototipos:    05   02   25   10   02   21   20   06   05   20
+
+		Tempo:  1070.54396987  Segundos
+
+		Quantidade de iteracoes: 100
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.82	0.03	0.87	0.06	0.75	0.05	0.81	0.02	1.00	0.00
+
+
+	base 'vehicle' - 10:
+
+		Quantidade inicial de prototipos:  14    12    11    06    08    08    08    13    18    09
+		Quantidade final de prototipos:   205   201   194   194   209   203   205   203   197   211
+
+		Tempo:  9101.72176099  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.66	0.05	0.71	0.06	0.52	0.11	0.61	0.06	0.73	0.01
+
+
+	base 'vowel' - 11:
+
+		Quantidade inicial de prototipos:  16   05   03   05   04   17   11   15   02   17
+		Quantidade final de prototipos:    73   73   75   77   75   73   73   76   71   73
+
+		Tempo:  2017.23198891  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.96	0.02	0.96	0.02	0.98	0.06	0.97	0.03	0.84	0.00	
+
+
+	base 'wine' - 12:
+
+		Quantidade inicial de prototipos:  06   06   08   14   14   09   15   11   20   13
+		Quantidade final de prototipos:    04   07   10   09   08   08   11   08   11   12
+
+		Tempo:  84.2792069912  Segundos
+
+		Quantidade de iteracoes: 200
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.97	0.04	0.97	0.04	0.95	0.08	0.96	0.05	0.95	0.01
+
+
+	base 'yeast' - 13:
+
+		Quantidade inicial de prototipos:  08    02    20    20    08    10    11    04    03    10
+		Quantidade final de prototipos:   567   311   643   647   501   593   642   610   590   624
+
+		Tempo:  5294.2410121  Segundos
+
+		Quantidade de iteracoes: 50
+
+		Resultado:
+
+			Gen. Accuracy	Maj. Accuracy	Min. Accuracy	AUC. Accuracy	Data Reduction
+			0.48	0.03	0.49	0.04	0.45	0.06	0.47	0.04	0.57	0.07
+

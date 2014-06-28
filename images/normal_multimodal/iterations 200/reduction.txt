@@ -1,0 +1,1 @@
+normal_multimodal	reduction: 0.95

@@ -8,7 +8,7 @@ from mlcin.utils import data
 class Runner(object):
 
     def __init__(self, folds=5, normalize=True, prefix=None, module=None):
-        self.folds = 5
+        self.folds = folds
         self.normalize = normalize
         self.prefix = prefix
         self.module = module
@@ -39,7 +39,8 @@ class Runner(object):
     def run(self):
         for index, dataset in enumerate(self.datasets):
             results = []
-            for fold in range(1, self.folds + 1):
+            for fold in range(0, self.folds + 1): # Para base balanceada
+            #for fold in range(1, self.folds + 1): # Para base desbalanceada
                 X_tra, y_tra = keel.load_keel_dataset(
                     dataset, fold, 'tra', self.prefix, self.module, fold_count=self.folds)
                 X_tst, y_tst = keel.load_keel_dataset(
@@ -69,19 +70,26 @@ class Runner(object):
 
 
 if __name__ == '__main__':
-    runner = Runner(
-        folds=5,
-        normalize=True,
-        prefix='datasets',
-        module='imbalanced')
+    
+    modulo = 'regular10'
+    
+    if( modulo == 'regular10' ):
+    
+        runner = Runner( folds=9, normalize=True, prefix='datasets', module=modulo )
 
-    datasets = ['glass1', 'ecoli-0_vs_1', 'iris0', 'glass0']
-    datasets = datasets + ['ecoli1', 'new-thyroid2', 'new-thyroid1', 'ecoli2']
-    datasets = datasets + [
-        'glass6',
-        'glass2',
-        'shuttle-c2-vs-c4',
-        'glass-0-1-6_vs_5']
+        datasets =            ['glass'   , 'image_segmentation', 'ionosphere'   , 'iris'  ]
+        datasets = datasets + ['liver'   , 'pendigits'         , 'pima_diabetes', 'sonar' ]
+        datasets = datasets + ['spambase', 'vehicle'           , 'vowel'        , 'wine'  , 'yeast' ]
+        
+    elif( modulo == 'imbalanced' ):
+    
+        runner = Runner( folds=5, normalize=True, prefix='datasets', module=modulo )
+    
+        datasets =            ['glass1', 'ecoli-0_vs_1', 'iris0'           , 'glass0'          ]
+        datasets = datasets + ['ecoli1', 'new-thyroid2', 'new-thyroid1'    , 'ecoli2'          ]
+        datasets = datasets + ['glass6', 'glass2'      , 'shuttle-c2-vs-c4', 'glass-0-1-6_vs_5']
+
+
     runner.set_datasets(datasets)
 
     runner.run()
