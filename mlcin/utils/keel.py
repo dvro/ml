@@ -35,7 +35,11 @@ def load_dataset(string, separator=","):
     X = np.asarray([[float(e) for e in v[:-1]] for v in s if len(v) > 1])
 
     d = {'positive': 1, 'negative': 0}
-    y = np.asarray([d[v[-1].strip()] if v[-1].strip() in d else v[-1].strip()
+    y = np.asarray([d[v[-1].strip()] if v[-1].strip() in d else int(v[-1])
                    for v in s])
+
+    # Tratamento para base balanceada funcionar
+    if( np.size( X, 0 ) != np.size( y, 0 ) ):
+        y = np.delete( y, 0, 0 )
 
     return X, y

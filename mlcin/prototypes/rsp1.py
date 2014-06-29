@@ -9,6 +9,7 @@ import sklearn
 import math
 from scipy.spatial.distance import pdist, squareform
 from .base import InstanceReductionMixIn
+import matplotlib.pyplot as plt
 
 
 class ReductionBySpacePartitioning1(InstanceReductionMixIn):
@@ -18,11 +19,12 @@ class ReductionBySpacePartitioning1(InstanceReductionMixIn):
     This class was created by Joao Paulo and Rene. 
     '''
 
-    def __init__(self, b=1):
+    def __init__(self, b=1,plotStep=False):
         if b:
             self.b = b
         else:
             self.b = 1
+        self.plotStep = plotStep
             
     def isHomogeneous(self,y,lista):
         """ Recebe duas listas, uma com os indices e uma com as classes de toda a base como paremetro e verifica se o subconjunto da lista eh homogeneo """
@@ -93,6 +95,35 @@ class ReductionBySpacePartitioning1(InstanceReductionMixIn):
                     conjp1 += [i]
             
             conjuntos += [conjp1,conjp2] #atribui os dois conjuntos a lista de conjuntos
+            
+            if (self.plotStep):
+                title = "RSP 1 - b = " + str(b) + " step: " + str(z)
+                plt.title(title)
+                plt.xlim(-10,10)
+                plt.ylim(-10,10)
+                plt.xlabel('feature 1')
+                plt.ylabel('feature 2')
+                plt.plot(X[p1,0],X[p1,1],"+")
+                plt.plot(X[p2,0],X[p2,1],".")
+                
+
+                for c1 in conjp1:
+                    plt.plot(X[c1,0],X[c1,1],"ro")
+                
+                for c2 in conjp2:
+                    plt.plot(X[c2,0],X[c2,1],"yo")
+                    
+                markers=["bs", "1", "k^", "d","h","4","8","s","p"]
+                p = 0
+                for cj in conjuntos:
+                    for t in cj: 
+                        a = (t in conjp1) or (t in conjp2) or (t == p1) or (t == p2)
+                        if a == False:
+                            plt.plot(X[t,0],X[t,1],markers[p])
+                    p += 1 
+                
+                plt.savefig("RSP1Step/" + title)
+                plt.clf() 
     
             #Seleciona proxima divisao dentro de conjuntos
             if (z < b-1):
@@ -122,5 +153,4 @@ class ReductionBySpacePartitioning1(InstanceReductionMixIn):
         self.prototypes = np.asarray(prototypes)
         self.prototypes_labels = np.asarray(prototypes_labels)
         self.reduction_ratio = 1 - float(len(self.prototypes_labels)) / len(self.y)
-        print "REDUCTION: ", self.reduction_ratio
         return self.prototypes, self.prototypes_labels
