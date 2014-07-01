@@ -36,11 +36,11 @@ if __name__ == '__main__':
     mode = 1
     b = 10
     
-    for i in range(1,4):
+    for i in range(1,3):
         mode = i
         for modulo in modulos:
             if (mode == 1 or mode == 2):
-                for j in range(5,7):
+                for j in range(25,40):
                     b = j
                     if( modulo == 'regular10' ):
                     
