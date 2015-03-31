@@ -9,6 +9,7 @@ class RunnerRPS(Runner):
     def get_prototypes(self, X, y):
         rps = RandomPrototypeSelection()
         rps.fit(X, y).reduce_data()
+        print rps.get_prototypes()
         return rps.get_prototypes()
 
 if __name__ == '__main__':

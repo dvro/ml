@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//mlcin/prototypes/cnn.py=utf-8
+encoding//mlcin/prototypes/enn.py=utf-8
+encoding//mlcin/prototypes/renn.py=utf-8
+encoding//mlcin/prototypes/sgp.py=utf-8
+encoding//mlcin/prototypes/tomek_links.py=utf-8
+encoding/artificial_all.py=utf-8
+encoding/artificial_rsp.py=utf-8
+encoding/artificial_rsp2.py=utf-8
+encoding/artificial_rsp3.py=utf-8
+encoding/balanced_rps1.py=utf-8
+encoding/runner.py=utf-8
+encoding/runner_compararTecnicas.py=utf-8
+encoding/runner_rps.py=utf-8
+encoding/runner_rsp.py=utf-8
